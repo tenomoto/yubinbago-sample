@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <!-- Yubinbangojs -->
+        <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+
+        <title>address form</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>住所入力</h1>
+            <p>郵便番号を入力して下さい。住所の一部が自動入力されます。「以降の住所」を記入してください。</p>
+            <form class="h-adr">
+                <span class="p-country-name" style="display:none;">Japan</span>
+                
+                <div class="form-group">
+                    <label for="postalcode">郵便番号</label>
+                    〒<input type="text" class="p-postal-code" size="8" maxlength="8" placeholder="0000000">
+                </div>
+                <div class="form-group">
+                    <label for="prefecture">都道府県:</label>
+                    <input type="text" class="p-region" id="prefecture" readonly tabindex="-1"/>
+                </div>
+                <div class="form-group">
+                    <label for="city">市区町村</label>
+                    <input type="text" class="p-locality" id="city" readonly tabindex="-1"/>
+                    <input type="text" class="p-street-address"readonly tabindex="-1"/>
+                </div>
+                <div class="form-group">
+                    <label for="address">以降の住所</label>
+                    <input type="text" class="p-extended-address" id="address" placeholder="番地，建物，部屋番号等"/>
+                </div>
+                <button type="submit" class="btn btn-primary">送信</button>
+            </form>
+        </div>
+    </body>
+</html>
